@@ -1,0 +1,9 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+*.zip
+zip-test-results/
+zip-test-output.log
+screenshots/foundation-*.png
+.env*

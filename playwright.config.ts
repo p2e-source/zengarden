@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'tests/browser',timeout:45000,use:{baseURL:process.env.GAME_URL||'http://127.0.0.1:5260/zen-garden/',browserName:'chromium',acceptDownloads:true},webServer:process.env.GAME_URL?undefined:{command:'npm run build && node scripts/preview.mjs',url:'http://127.0.0.1:5260/zen-garden/',reuseExistingServer:!process.env.CI,timeout:120000},reporter:[['list'],['html',{open:'never'}]]});
